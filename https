@@ -1,0 +1,11 @@
+# https
+setting https on graylog when installed from package in Centos 7
+
+edit /usr/share/graylog-web/bin/graylog-web
+
+# add GRAYLOG_WEB_HTTPS_PORT="9000"
+# comment out JAVA_OPTS="$JAVA_OPTS -Dhttp.address=$GRAYLOG_WEB_HTTP_ADDRESS"
+# comment out JAVA_OPTS="$JAVA_OPTS -Dhttp.port=$GRAYLOG_WEB_HTTP_PORT"
+
+# add JAVA_OPTS="$JAVA_OPTS -Dhttp.port=disabled"
+# add JAVA_OPTS="$JAVA_OPTS -Dhttps.port=$GRAYLOG_WEB_HTTPS_PORT"
